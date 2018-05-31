@@ -10,3 +10,35 @@
     background-color: grey;
     border: 2px solid black;
 }
+
+.header {
+    height: 1000px;
+    width: 100%;
+    background-image: url("images/header.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+}
+
+.header__container {
+
+}
+
+.header__container__content {
+
+}
+
+.heading {
+    color: white;
+    font-size: 1.4em;
+}
+
+.button__container {
+    
+}
+
+.button__container__button {
+    align-self: flex-end;
+}
