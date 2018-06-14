@@ -61,3 +61,12 @@ export default function add() {
 import { add } from '/.add';
 //or
 import add from './add'; */
+
+//webpack
+/* module.exports = {
+    entry: './app/main.js',
+    output: {
+        path: './dist',
+        filename: 'bundle.js'
+    ]
+} */
