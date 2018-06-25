@@ -1,4 +1,4 @@
-const http = require('http');
+/* const http = require('http');
 
 const server = http.createServer((request, response) => {
     //console.log('I hear you! thanks for the request');
@@ -15,4 +15,36 @@ const server = http.createServer((request, response) => {
     response.end(JSON.stringify(user));
 })
 
-server.listen(3000);
+server.listen(3000); */
+
+const express = require('express');
+
+const app = express();
+
+/* app.get('/', (req, res) => {
+    //res.send("<h1>Hello</h1>");
+    const user = {
+        name: 'Sally',
+        hobby: 'soccer'
+    }
+    res.send(user);
+}); */
+
+app.get('/profile', (req, res) => {
+    res.send("getting profile");
+});
+
+app.get('/', (req, res) => {
+    res.send("getting root");
+});
+
+app.post('/profile', (req, res) => {
+    //res.send("<h1>Hello</h1>");
+    const user = {
+        name: 'Sally',
+        hobby: 'soccer'
+    }
+    res.send(user);
+});
+
+app.listen(3000);
