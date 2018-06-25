@@ -30,7 +30,7 @@ const app = express();
     res.send(user);
 }); */
 
-app.get('/profile', (req, res) => {
+/* app.get('/profile', (req, res) => {
     res.send("getting profile");
 });
 
@@ -45,6 +45,14 @@ app.post('/profile', (req, res) => {
         hobby: 'soccer'
     }
     res.send(user);
+}); */
+
+app.use((req, res, next) => {
+    console.log('<h1>HELLLOO</h1>');
+    next();
+});
+app.get('/', (req, res) => {
+    res.send("testtest");
 });
 
 app.listen(3000);
