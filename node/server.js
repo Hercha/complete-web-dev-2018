@@ -18,6 +18,7 @@ const server = http.createServer((request, response) => {
 server.listen(3000); */
 
 const express = require('express');
+const bodyParser = require('body-parser');
 
 const app = express();
 
@@ -47,12 +48,28 @@ app.post('/profile', (req, res) => {
     res.send(user);
 }); */
 
-app.use((req, res, next) => {
+/* app.use(bodyParser.urlencoded({extended:false}));
+app.use(bodyParser.json()); */
+/* app.use((req, res, next) => {
     console.log('<h1>HELLLOO</h1>');
     next();
+}); */
+/* app.get('/:id', (req, res) => {
+    //console.log(req.query);
+    //console.log(req.headers);
+    console.log(req.params);
+    res.send("getting root");
+}); */
+
+/* app.get('/profile', (req, res) => {
+    res.send("getting root");
 });
-app.get('/', (req, res) => {
-    res.send("testtest");
-});
+
+app.post('/profile', (req, res) => {
+    console.log(req.body);
+    res.send("Success");
+}); */
+
+app.use(express.static(__dirname + '/public'))
 
 app.listen(3000);
