@@ -1,0 +1,30 @@
+Just wanted to remind everyone that on Windows 10 all psql commands will not work from your command prompt unless you add the proper paths to your environment variables in your system properties.
+You will need to know where your "lib" and "bin" folders are located on your computer when you installed PostgreSQL. For me, the path to bin and lib that I created when I installed postgres is:
+C:\Program Files\PostgreSQL\10\bin
+C:\Program Files/PostgreSQL\10\lib
+On Windows 10, click the start/windows button on your taskbar and type "Edit the system environment variables" > Environment variables > In system variables you will see "Path"> Double click on Path or click "Edit"> Click New and add both of the above paths one by one. Don't delete any paths that you already see, just add these extra two paths to any open slots.
+Restart command line. Now your command line should work with Postgres.
+Just in case your command line isn't working with postgres on other Windows versions, control panel > system > advanced system settings > advanced > environment variables > System variables > Path > Click New and add both paths one by one. 
+
+After installation
+*****************
+* Windows 7 users *
+*****************
+Enter cmd and go to  c:\Program Files\PostgreSQL\10\bin 
+************
+* commands *
+************
+1. psql -U postgres -h localhost 
+2. postgress-# create database 'test'; 
+3. postgress-# \l (List of databases)
+4. postgress-# \c test (Access to you database) 
+I will show you this way.
+5. test-# (continue the course from here!)
+
+OR
+Launch SQL Shell, just use all the default values it displays except, 
+enter your password, which you had selected at the time of installation.
+
+and do the same steps except the first.
+
+Open cmd (command prompt) as the postgres command using the following command: runas /user:postgres cmd.exe
